@@ -11,7 +11,7 @@ driver.get('https://www.sahibinden.com/kategori/otomobil')
 f = open('sahibinden-araba.txt', 'w', encoding='utf8')
 
 for x in range(1, 50):
-    driver.get('https://www.sahibinden.com/vasita?pagingOffset='+str(x*20)+'#/')
+    driver.get('https://www.sahibinden.com/vasita?pagingOffset='+str(x)+'#/')
     for y in range(1, 15):
         driver.implicitly_wait(3)
         a = driver.find_elements_by_css_selector('.search-result-item > a')[y].click()
